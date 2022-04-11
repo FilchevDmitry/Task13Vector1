@@ -15,6 +15,8 @@ int main() {
     for (int i = 0; i < num.size(); ++i) {
         cout << num[i] << " ";
     }
-    system("pause");
+    for (int i = 0; i < num.size(); ++i) {
+        cout << num[i] << " ";
+    }
     return 0;
 }
