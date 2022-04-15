@@ -9,21 +9,27 @@ int main() {
     cin >> cou;
     for (int i = 0; i < cou; ++i) {
         int temp = 0;
-        cout << "Input numbers " << i + 1 << "-";
+        cout << "Input numbers" << i + 1 << " - ";
         cin >> temp;
         num.push_back(temp);
     }
     cout << "Enter delete number =";
     cin >> del;
+    int sp = 0;
     for (int i = 0; i < num.size(); i++)
     {
-        if (num.at(i) == del) {
-            num.erase(num.begin() + i);
-            --i;
+        num[sp] = num[i];
+        if (num[i] == del) {
+            continue;
         }
+        sp++;
     }
+    sp = num.size() - sp;
+    while (sp--)
+        num.pop_back();
     for (int i = 0; i < num.size(); ++i) {
         cout << num[i] << " ";
     }
+
     return 0;
 }
